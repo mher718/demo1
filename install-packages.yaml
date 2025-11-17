@@ -1,0 +1,17 @@
+- hosts: "{{ group }}"
+
+  become: yes
+  ignore_unreachable: yes
+  tasks:
+
+  - name: install core packages
+    apt:
+      name:
+        - prometheus-node-exporter
+        - nfs-common
+        - open-vm-tools
+        - unzip
+        - zip
+      update_cache: yes
+
+
