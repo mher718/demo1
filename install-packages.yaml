@@ -1,17 +1,54 @@
-- hosts: "{{ group }}"
-
+---
+- name: Install default packages on Ubuntu 22.04
+  hosts: all
   become: yes
-  ignore_unreachable: yes
-  tasks:
+  gather_facts: yes
 
-  - name: install core packages
-    apt:
-      name:
-        - prometheus-node-exporter
-        - nfs-common
-        - open-vm-tools
-        - unzip
-        - zip
-      update_cache: yes
+  vars:
+    default_packages:
+      - curl
+      - wget
+      - git
+      - vim
+      - nano
+      - unzip
+      - zip
+      - htop
+      - tree
+      - software-properties-common
+      - lsb-release
+      - net-tools
+      - openssh-client
+      - openssh-server
+      - build-essential
+      - python3-pip
+      - python3-venv
+      - default-jdk
+      - sysstat
+      - dstat
+
+  tasks:
+    - name: Install default packages
+      ansible.builtin.apt:
+        name: "{{ default_packages }}"
+        state: present
+        update_cache: yes
+
+#- hosts: "{{ group }}"
+#
+#  become: yes
+#  ignore_unreachable: yes
+#  gather_facts: yes
+#  tasks:
+#
+#  - name: install core packages
+#    apt:
+#      name:
+#        - prometheus-node-exporter
+#        - nfs-common
+#        - open-vm-tools
+#        - unzip
+#        - zip
+#      update_cache: yes
 
 
