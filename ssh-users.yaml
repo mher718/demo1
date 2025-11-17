@@ -48,8 +48,8 @@
             key: "AAAAB3NzaC1yc2EAAAADAQABAAACAQCvUN7XjMuQTYSMdHRkC5r+VtSXlFBItcl3uH1sDD0IqnS4j56djHqH93pKvjh8+ALtakONU7O1jlqqtyPkcI40VyoUmFRlCOxykUTyrfT5FrehNCOGEK5FD+Wogu3X2ehx1r0MN5YrWCfpu7m1kKhg+MW1+Utw2D9jV2q8Lttm25N4NbTEwOHW2hs+QNF/WTVhc7vHGa9fDcc07Hy7EQKgfCn2Ea9S1igLAWrP2zGHXMTKvdUysnXKzRz3GY4q9+h3YyIJg0YqIPoSaYu/XJEeWqlaZRhaeYdD+2EZ7M7PPLyBTxGfZYTpYn4Dfd+ZiFIutY6Udgss3Gv3yPHINoxaAJg2vyuhMotZufg+EaUGsGNfbZjsGJSMZjFGiPayF+U6aWskkU9Ix1dMBKBD2RHyqehyBvTAF3GRjhjBLPpBME53k3hMKCPYOUaRtm+oIDLLtu27ZFP6I/6tDlK5JoP4k1nHusrHalHzuwFcfZ8QycAXbhitMg6WpsZfdanL26FUwp06B3f1g3mMCFxxXZxgQHwRFJUe+a12SefwIvatGFfYqJFaXoJ/cgeJWkdwD3J5bPACUKrmpoNowZ4SJh6t2GmAQ5E/04JIAPLbzNsLAf/Y7SCbwHcrfVWel9bwzapWrZgeOYZBKPd5U+iAKdXTqcyJ8bsyO5EJvNmwfIzUzw=="
 
     # List of users to remove
-    users_to_remove:
-      - demo2
+    #users_to_remove:
+    #  - demo2
 
   tasks:
 
@@ -79,9 +79,9 @@
       loop: "{{ users | dict2items | subelements('value.keys') }}"
 
     # Remove deprecated users
-    - name: Remove specified users
-      user:
-        name: "{{ item }}"
-        state: absent
-        remove: yes
-      loop: "{{ users_to_remove }}"
+    #- name: Remove specified users
+    #  user:
+    #    name: "{{ item }}"
+    #    state: absent
+    #    remove: yes
+    #  loop: "{{ users_to_remove }}"
