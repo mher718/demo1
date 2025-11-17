@@ -3,6 +3,7 @@
   hosts: "{{ group }}"
   become: yes
   gather_facts: yes
+  ignore_unreachable: yes
 
   tasks:
     - name: Ensure passwordless sudo for %sudo group

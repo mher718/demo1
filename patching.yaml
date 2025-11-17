@@ -1,6 +1,7 @@
 ---
 - name: Update APT and run Salt command
   hosts: "{{ group }}"
+  ignore_unreachable: yes
   become: yes
   tasks:
     - name: Update APT package index
