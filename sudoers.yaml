@@ -1,0 +1,14 @@
+---
+- name: Configure passwordless sudo for sudo group
+  hosts: "{{ group }}"
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Ensure passwordless sudo for %sudo group
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^%sudo'
+        line: '%sudo   ALL=(ALL:ALL) NOPASSWD:ALL'
+        validate: 'visudo -cf %s'
