@@ -1,0 +1,32 @@
+---
+- name: Update APT and run Salt command
+  hosts: "{{ group }}"
+  become: yes
+  tasks:
+    - name: Update APT package index
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600  # Optional: Avoids frequent updates within an hour
+
+    - name: Get a list of upgradable packages excluding specific ones
+      shell: |
+        apt list --upgradable | grep -E -v "(Listing|kube|docker|salt|gluster|maria|zabbix|keepalived|galera|libmysqlclient|dse|cassandra|datastax|opscenter|containerd.io|openjdk|open-vm-tools|sosreport|postgresql|pgpool|php|apache)" | cut -d '/' -f1 | tr '\n' ' '
+      register: upgradable_packages
+      changed_when: false
+      check_mode: no
+
+    - name: Install filtered upgradable packages
+      apt:
+        name: "{{ upgradable_packages.stdout.split() }}"
+        state: latest
+        force: yes
+        allow_unauthenticated: yes  # Optional, remove if not needed
+      when: upgradable_packages.stdout != ""
+
+    - name: Perform autoremove of unnecessary packages
+      apt:
+        autoremove: yes
+
+    - name: Debug output of upgradable packages
+      debug:
+        msg: "Packages to be upgraded: {{ upgradable_packages.stdout }}"
