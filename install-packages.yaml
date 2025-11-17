@@ -7,6 +7,7 @@
   vars:
     default_packages:
       - curl
+      - chrony
       - wget
       - git
       - vim
