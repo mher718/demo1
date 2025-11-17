@@ -1,0 +1,11 @@
+---
+- name: clean-apt-packages
+  hosts: "{{ group }}"
+  become: yes
+  gather_facts: yes
+
+  tasks:
+    - name: Run apt autoremove
+      ansible.builtin.apt:
+        autoremove: yes
+        update_cache: yes
