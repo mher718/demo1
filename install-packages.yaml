@@ -30,6 +30,11 @@
       - dstat
 
   tasks:
+    - name: Update apt package cache
+      ansible.builtin.apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
     - name: Install default packages
       ansible.builtin.apt:
         name: "{{ default_packages }}"
