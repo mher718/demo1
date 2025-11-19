@@ -1,5 +1,5 @@
 ---
-- name: Update APT and run Salt command
+- name: Perform OS Patching
   hosts: "{{ group }}"
   ignore_unreachable: yes
   become: yes
