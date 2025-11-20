@@ -32,13 +32,13 @@
           - type: ssh-rsa
             key: "AAAAB3NzaC1yc2EAAAADAQABAAACAQCaKLN/+yO3MfZUwpzLjZwsYMoH1GJzctj7RVu2R+wvs/NG0h71P1jloOYfXG0MU4+Z3Vu+rbHlFZ7vRyxGICeyQlBv/kxKAYCnbjMSL++YD5+CTkCUFYlhgQwO2s2MRi0cBgPsGGMbSAcKIiMt0ELB0Xf3VB4EdGktRcw/mzqDix6272Z/494DasPbrslQj4gv/yBXJ7s/axvXzVOpL7Fa8I/OrF2pZ2yUvTCG99IkTRuTilLQxMRB8A4ns3JS53FTToqya0rWBHNyMGNX6fgRD0XIGz0gvYYSwmicuYfzgfEuyw8C+TA41nJb+p0DG0WDi8BRnXkBLtfnCY3IU2WdQnCpPXmBxcsFNAn9EI8OWcS8AlS4/3oGumsN4s+6YBzWQmCByzk9/yQXIVvC0egxfgOFquAGDf2yRCocnx1eHaxOhwfRlpvdwgVyj/if7FU4JGcRfmhtZhQkfk2jX+ZaCGreZOFR44gs/Wff8wBXQuevzbtlkefx9o85HPZK5vM9avjuhgoe+VhHrCkRg4Du4bnWeMZj9YXf2BqebcKFYdadO3G5SwBkP2RRIDMs0qYXNGZQQM2wn8OC6O3ZuqMjnKZVVQb6ZJ2QjTEbcJNSoykUvJIAOcLtcRJZUq7g8ixTHncGwwnFPOlJHctiPzUNTdhLbRlPgSlxMEy8VB+bWQ=="
 
-      demo1:
-        fullname: "Demo One"
-        email: "demo.one@example.com"
-        groups: [sudo]
-        keys:
-          - type: ssh-rsa
-            key: "AAAAB3NzaC1yc2EAAAADAQABAAACAQCvUN7XjMuQTYSMdHRkC5r+VtSXlFBItcl3uH1sDD0IqnS4j56djHqH93pKvjh8+ALtakONU7O1jlqqtyPkcI40VyoUmFRlCOxykUTyrfT5FrehNCOGEK5FD+Wogu3X2ehx1r0MN5YrWCfpu7m1kKhg+MW1+Utw2D9jV2q8Lttm25N4NbTEwOHW2hs+QNF/WTVhc7vHGa9fDcc07Hy7EQKgfCn2Ea9S1igLAWrP2zGHXMTKvdUysnXKzRz3GY4q9+h3YyIJg0YqIPoSaYu/XJEeWqlaZRhaeYdD+2EZ7M7PPLyBTxGfZYTpYn4Dfd+ZiFIutY6Udgss3Gv3yPHINoxaAJg2vyuhMotZufg+EaUGsGNfbZjsGJSMZjFGiPayF+U6aWskkU9Ix1dMBKBD2RHyqehyBvTAF3GRjhjBLPpBME53k3hMKCPYOUaRtm+oIDLLtu27ZFP6I/6tDlK5JoP4k1nHusrHalHzuwFcfZ8QycAXbhitMg6WpsZfdanL26FUwp06B3f1g3mMCFxxXZxgQHwRFJUe+a12SefwIvatGFfYqJFaXoJ/cgeJWkdwD3J5bPACUKrmpoNowZ4SJh6t2GmAQ5E/04JIAPLbzNsLAf/Y7SCbwHcrfVWel9bwzapWrZgeOYZBKPd5U+iAKdXTqcyJ8bsyO5EJvNmwfIzUzw=="
+#      demo1:
+#        fullname: "Demo One"
+#        email: "demo.one@example.com"
+#        groups: [sudo]
+#        keys:
+#          - type: ssh-rsa
+#            key: "AAAAB3NzaC1yc2EAAAADAQABAAACAQCvUN7XjMuQTYSMdHRkC5r+VtSXlFBItcl3uH1sDD0IqnS4j56djHqH93pKvjh8+ALtakONU7O1jlqqtyPkcI40VyoUmFRlCOxykUTyrfT5FrehNCOGEK5FD+Wogu3X2ehx1r0MN5YrWCfpu7m1kKhg+MW1+Utw2D9jV2q8Lttm25N4NbTEwOHW2hs+QNF/WTVhc7vHGa9fDcc07Hy7EQKgfCn2Ea9S1igLAWrP2zGHXMTKvdUysnXKzRz3GY4q9+h3YyIJg0YqIPoSaYu/XJEeWqlaZRhaeYdD+2EZ7M7PPLyBTxGfZYTpYn4Dfd+ZiFIutY6Udgss3Gv3yPHINoxaAJg2vyuhMotZufg+EaUGsGNfbZjsGJSMZjFGiPayF+U6aWskkU9Ix1dMBKBD2RHyqehyBvTAF3GRjhjBLPpBME53k3hMKCPYOUaRtm+oIDLLtu27ZFP6I/6tDlK5JoP4k1nHusrHalHzuwFcfZ8QycAXbhitMg6WpsZfdanL26FUwp06B3f1g3mMCFxxXZxgQHwRFJUe+a12SefwIvatGFfYqJFaXoJ/cgeJWkdwD3J5bPACUKrmpoNowZ4SJh6t2GmAQ5E/04JIAPLbzNsLAf/Y7SCbwHcrfVWel9bwzapWrZgeOYZBKPd5U+iAKdXTqcyJ8bsyO5EJvNmwfIzUzw=="
       
       demo2:
         fullname: "Demo Two"
